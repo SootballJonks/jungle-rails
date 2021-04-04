@@ -11,6 +11,14 @@
   <%= render 'layouts/top_nav' %>
 
   <main class="container">
+
+    <% if active_sale? %>
+      <p class="alert alert-info">
+        The <%= "_placeholder_" %> event is happening right now!
+        Get <%= "_num_" %>% off on selected items!
+      </p>
+    <% end %>
+    
     <%= yield %>
   </main>
 
